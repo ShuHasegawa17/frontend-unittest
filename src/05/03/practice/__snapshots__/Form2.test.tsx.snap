@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snap 1`] = `
+<div>
+  <form>
+    <h2>
+      アカウント情報
+    </h2>
+    <p>
+      hase
+    </p>
+    <div>
+      <button>
+        編集する
+      </button>
+    </div>
+  </form>
+</div>
+`;

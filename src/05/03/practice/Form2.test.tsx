@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, logRoles, render, screen } from '@testing-library/react';
 import { Form2 } from './Form2';
 
 describe('UIコンポーネントテスト', () => {
@@ -31,4 +31,12 @@ describe('UIコンポーネントテスト', () => {
     // モック関数が呼ばれたこと。
     expect(mockFn).toHaveBeenCalled();
   });
+});
+test('snap', () => {
+  const { container } = render(<Form2 name="hase" />);
+  expect(container).toMatchSnapshot();
+});
+test('logRoles: レンダリング結果からロールとアクセシブルネームを確認', () => {
+  const { container } = render(<Form2 name="taro" />);
+  logRoles(container);
 });
